@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+      
+}
+:root {
+    --primary: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --color-icon: #6C7ED2;
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --white: #fff;
+    --radius: 10px;
+}
+body{
+    background: fixed;
+    width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-Blue);
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    
+}
+.logo1{
+    background-color:hsl(228, 56%, 26%);
+    border-radius: 5%;
+    border-top-right-radius: 80px;
+
+}
+
+.logo{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    margin-left: 30px;
+    gap: 15px;
+    
+}
+.icon1{
+    background-color: hsl(229, 57%, 11%);
+    padding: 20px;
+    border-radius: 20%;
+    
+
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+}
+.container2{
+    position: relative;
+    margin-top: 60px;
+    width: 500px;
+    height: 160px;
+    padding: 35px;
+    background-color: var(--dark-blue);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+p{
+    margin-top: 10px;
+}
+.container3{
+    width: 100%;
+}
+.line{
+    height: 20px;
+    background-color: var(--very-dark-blue);
+    margin: 5px;
+    border-radius: 10px;
+
+}
+.line2{
+    width: 300px;
+    height: 18px;
+    margin-right: 4px;
+  background: var(--primary);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 200ms linear;
+  
+}
+.line2::after {
+    content: '';
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
+    margin: 2px;
+  }
+.written{
+    display: flex;
+    justify-content: space-between;
+
+}
+.out{
+    padding: 5px;
+    font-weight: 700;
+}
+.off{
+    padding: 5px;
+    font-weight: 700;   
+}
+.spotlight {
+    position: absolute;
+    bottom: 130px;
+    width: 179px;
+    height: 70px;
+    left: 250px;
+    font-size: 12px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    color: var(--very-dark-blue);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+  .spotlight > span {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .spotlight::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+  @media (max-width: 855px){
+    body{
+        background: url('images/bg-mobile.png') no-repeat center center fixed;
+        background-size: cover;
+       
+    }
+    .container1{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: fit-content;
+        
+    }
+  }
+  @media (max-width: 530px){
+    .logo1{
+        width: 98%;
+    }
+    .container2{
+        width: min-content;
+        padding-top: 0px;
+        margin-top: 0px;
+        padding: 10px;
+    }
+    .spotlight{
+        bottom: -30px;
+        left: 70px;
+    }
+    .spotlight::after{
+        border-width: 0px;
+    }
+    .line2{
+        width: 250px;
+    }
+    .container3{
+        width: 330px;
+    }
+}
+@media (max-width:356px){
+    .logo1{
+        width: 80%;
+        margin-left: 30px;
+    }
+    .container2{
+        width: 80%;
+        margin-left: 30px;
+    }
+    .spotlight{
+        padding: 5px;
+        bottom: -20px;
+        width: fit-content;
+    }
+    .written{
+        width: 80%;
+    }
+    .container3{
+        width: 270px;
+    }
+    .line2{
+        width: 200px;
+    }
+    .off{
+        margin-top: 3px;
+        padding: 0;
+        position: relative;
+        right: -50px;
+    }
+}
